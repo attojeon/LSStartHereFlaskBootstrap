@@ -1,0 +1,41 @@
+{% extends "comm/base.html" %}
+
+{% block content_title %}{% if search %}Search "{{ search }}"{% else %}목록보기{% endif %}{% endblock %}
+
+{% block header_content %}
+    <header class="masthead" style="background-image:url('/static/img/home-bg.jpg');">
+      <div class="overlay"></div>
+      <div class="container">
+          <div class="row">
+              <div class="col-md-10 col-lg-8 mx-auto">
+                  <div class="site-heading">
+                      <h1>블로그형템플릿</h1><span class="subheading">Flask와 Bootstrap으로 제작하는 블로그형 웹앱</span></div>
+              </div>
+          </div>
+      </div>
+    </header>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        {% for x in range(10) %}
+            <div class="card col-md-4">
+                <div class="card-header">
+                    <p>제목</p>
+                </div>
+                <a href="{{ url_for('main.post', uid=x+1) }}">
+                    <img class="card-img-top" src="static/img/avatars/avatar_{{ x+1 }}.jpg" width="100%">
+                </a>
+                <div class="card-body">
+                    <p>본문</p>
+                </div>
+                <div class="card-footer">
+                    <p>작성:아토쌤</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

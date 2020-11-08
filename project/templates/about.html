@@ -1,0 +1,31 @@
+{% extends "comm/base.html" %}
+
+{% block content_title %}{% if search %}Search "{{ search }}"{% else %}연락처{% endif %}{% endblock %}
+
+{% block header_content %}
+    <header class="masthead" style="background-image:url('static/img/about-bg.jpg');">
+      <div class="overlay"></div>
+      <div class="container">
+          <div class="row">
+              <div class="col-md-10 col-lg-8 mx-auto">
+                  <div class="site-heading">
+                    <h1>소개화면</h1><span class="subheading">Flask와 Bootstrap으로 제작하는 블로그형 웹앱</span></div>
+              </div>
+          </div>
+      </div>
+    </header>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 col-lg-8 mx-auto">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nostrum ullam eveniet pariatur voluptates odit, fuga atque ea nobis sit soluta odio, adipisci quas excepturi maxime quae totam ducimus consectetur?</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium recusandae illo eaque architecto error, repellendus iusto reprehenderit, doloribus, minus sunt. Numquam at quae voluptatum in officia voluptas voluptatibus, minus!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consequuntur magnam, excepturi aliquid ex itaque esse est vero natus quae optio aperiam soluta voluptatibus corporis atque iste neque sit tempora!</p>
+        </div>
+    </div>
+</div>
+<hr>
+
+{% endblock %}
